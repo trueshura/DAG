@@ -36,6 +36,11 @@ class Path {
     this.paths.splice(this.paths.length - 1, 1)
   }
 
+  /**
+   * Each value is array of vertices
+   *
+   * @returns {{next: (function(): {value: *, done: boolean})}}
+   */
   [Symbol.iterator] () {
     var index = -1
     var data = this.paths
